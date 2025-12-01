@@ -71,6 +71,9 @@
     <div class="sidebar">
         <h2>Admin</h2>
         <a href="#">Dashboard</a>
+        <a href="#"(click)="contador()">Alumnos</a>
+        <a href="#">Licenciaturas</a>
+        <a href="#">Escuelas</a>
         <a href="#">Usuarios</a>
         <a href="#">Reportes</a>
         <a href="#">Configuración</a>
@@ -89,9 +92,8 @@
         </div>
 
         <div class="card">
-            <h3>Estadísticas, {{title}}</h3>
+            <h3>Estadísticas, {{title + " " + valor}}</h3>
             <p>Aquí puedes mostrar gráficos, métricas o reportes.</p>
-            <app-escuelas-endpoints/>
         </div>
     </div>
 
