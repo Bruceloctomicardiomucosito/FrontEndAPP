@@ -16,6 +16,7 @@ import { ModulosEndpoints } from './modulos-endpoints/modulos-endpoints';
 import { NivelEducativoEndpoints } from './nivel-educativo-endpoints/nivel-educativo-endpoints';
 import { SemestreActualEndpoints } from './semestre-actual-endpoints/semestre-actual-endpoints';
 import { UsuariosActualEndpoints } from './usuarios-actual-endpoints/usuarios-actual-endpoints';
+import { AsistenciaDiariaEndpoints } from './asistencia-diaria-endpoints/asistencia-diaria-endpoints';
 
 export const routes: Routes = [
     {path: 'alumnos', component: AlumnosEndpoints},
@@ -23,6 +24,7 @@ export const routes: Routes = [
     {path: 'asignacionGruposAulasEndpoints', component: AsignacionGruposAulasEndpoints},
     {path: 'asignacionPracticantesEndpoints', component: AsignacionPracticantesEndpoints},
     {path: 'asistenciaRemotaEndpoints', component: AsistenciaRemotaEndpoints},
+    {path: 'asistenciasDiarias', component: AsistenciaDiariaEndpoints},
     {path: 'aulasEndpoints', component: AulasEndpoints},
     {path: 'docentesEndpoints', component: DocentesEndpoints},
     {path: 'edificiosEndpoints', component: EdificiosEndpoints},
