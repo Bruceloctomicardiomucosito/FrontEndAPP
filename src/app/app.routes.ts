@@ -17,8 +17,10 @@ import { NivelEducativoEndpoints } from './nivel-educativo-endpoints/nivel-educa
 import { SemestreActualEndpoints } from './semestre-actual-endpoints/semestre-actual-endpoints';
 import { UsuariosActualEndpoints } from './usuarios-actual-endpoints/usuarios-actual-endpoints';
 import { AsistenciaDiariaEndpoints } from './asistencia-diaria-endpoints/asistencia-diaria-endpoints';
+import { Home } from './home/home';
 
 export const routes: Routes = [
+    {path: 'home', component: Home},
     {path: 'alumnos', component: AlumnosEndpoints},
     {path: 'asignacionDocenteMateriasEndpoints', component: AsignacionDocenteMateriasEndpoints},
     {path: 'asignacionGruposAulasEndpoints', component: AsignacionGruposAulasEndpoints},
