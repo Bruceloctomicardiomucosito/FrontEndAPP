@@ -25,6 +25,7 @@ export class App {
   statusInfraestructuraMenu = "close";
   statusPersonalMenu = "close";
   statusOfertaEducativaMenu = "close";
+  statusTablasGeneralesMenu = 'close'
 
 
   toggleAsignacionesMenu(){
@@ -60,5 +61,13 @@ export class App {
     }
     else
       this.statusOfertaEducativaMenu = "close"
+  }
+  toggleTablasGeneralesMenu(){
+    if (this.statusTablasGeneralesMenu == "close")
+    {
+      this.statusTablasGeneralesMenu = "open";
+    }
+    else
+      this.statusTablasGeneralesMenu = "close"
   }
 }

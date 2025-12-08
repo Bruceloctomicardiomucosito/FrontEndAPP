@@ -65,7 +65,7 @@
                             <i class="bi bi-list"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-none d-md-block"><a class="nav-link">Home</a></li>
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" routerLink="home">Home</a></li>
                     <li class="nav-item d-none d-md-block"><a class="nav-link">Contact</a></li>
                 </ul>
                 <!--end::Start Navbar Links-->
@@ -244,7 +244,8 @@
                 <!--begin::Brand Link-->
                 <a routerLink="home" class="brand-link">
                     <!--begin::Brand Image-->
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTyMStWAVf6qX0P65iQmgN9DIF4zWl0YEWg&s" style="max-width:30%; height: auto;border-radius: 50%;"/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTyMStWAVf6qX0P65iQmgN9DIF4zWl0YEWg&s"
+                        style="max-width:30%; height: auto;border-radius: 50%;" />
                     <!--end::Brand Image-->
                     <!--begin::Brand Text-->
                     <span class="brand-text fw-light">Navegation</span>
@@ -269,19 +270,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a routerLink="asignacionDocenteMateriasEndpoints" class="nav-link">
+                                    <a routerLink="asignaciones/DocenteMaterias" class="nav-link">
                                         <i class="fa-solid fa-chalkboard-user"></i>
                                         <p>Docente - Materias</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a routerLink="asignacionGruposAulasEndpoints" class="nav-link">
+                                    <a routerLink="asignaciones/GruposAulas" class="nav-link">
                                         <i class="fa-regular fa-object-group"></i>
                                         <p>Gupos - Aulas</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a routerLink="asignacionPracticantesEndpoints" class="nav-link">
+                                    <a routerLink="asignaciones/Practicantes" class="nav-link">
                                         <i class="fa-solid fa-graduation-cap"></i>
                                         <p>Practicantes</p>
                                     </a>
@@ -298,13 +299,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a routerLink="edificiosEndpoints" class="nav-link">
+                                    <a routerLink="infraestructura/edificios" class="nav-link">
                                         <i class="fa-solid fa-building"></i>
                                         <p>Edificios</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a routerLink="aulasEndpoints" class="nav-link">
+                                    <a routerLink="infraestructura/aulas" class="nav-link">
                                         <i class="fa-solid fa-house"></i>
                                         <p>Aulas</p>
                                     </a>
@@ -321,13 +322,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a routerLink="docentesEndpoints" class="nav-link">
+                                    <a routerLink="personal/docentes" class="nav-link">
                                         <i class="fa-solid fa-person-chalkboard"></i>
                                         <p>Docentes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a routerLink="alumnos" class="nav-link">
+                                    <a routerLink="personal/alumnos" class="nav-link">
                                         <i class="fa-solid fa-user-graduate"></i>
                                         <p>Alumnos</p>
                                     </a>
@@ -344,54 +345,65 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a routerLink="licenciaturasEndpoints" class="nav-link">
+                                    <a routerLink="ofertaEducativa/licenciaturas" class="nav-link">
                                         <i class="fa-solid fa-book-open-reader"></i>
                                         <p>Licenciaturas</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a routerLink="materiasEndpoints" class="nav-link">
+                                    <a routerLink="ofertaEducativa/materias" class="nav-link">
                                         <i class="fa-solid fa-book"></i>
                                         <p>Materias</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a routerLink="escuelasEndpoints" class="nav-link">
-                                <i class="fa-solid fa-school"></i>
-                                <p>Escuelas</p>
+                        <li class="nav-item menu-{{statusTablasGeneralesMenu}}" (click)="toggleTablasGeneralesMenu()">
+                            <a class="nav-link active">
+                                <i class="fa-solid fa-table"></i>
+                                <p>
+                                    Tablas Generales
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="gruposEndpoints" class="nav-link">
-                                <i class="fa-solid fa-people-roof"></i>
-                                <p>Grupos</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="modulosEndpoints" class="nav-link">
-                                <i class="fa-regular fa-calendar-days"></i>
-                                <p>Modulos</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="nivelEducativoEndpoints" class="nav-link">
-                                <i class="fa-solid fa-layer-group"></i>
-                                <p>Niveles Educativos</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="asistenciasDiarias" class="nav-link">
-                                <i class="fa-solid fa-school-circle-check"></i>
-                                <p>Asistencias Diarias</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a routerLink="semestreActualEndpoints" class="nav-link">
-                                <i class="fa-solid fa-school-circle-check"></i>
-                                <p>Semestre Actual</p>
-                            </a>
+                            <ul class="nav nav-treeview">                
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/escuelas" class="nav-link">
+                                        <i class="fa-solid fa-school"></i>
+                                        <p>Escuelas</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/grupos" class="nav-link">
+                                        <i class="fa-solid fa-people-roof"></i>
+                                        <p>Grupos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/modulos" class="nav-link">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <p>Modulos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/nivelEducativo" class="nav-link">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        <p>Niveles Educativos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/asistenciasDiarias" class="nav-link">
+                                        <i class="fa-solid fa-square-check"></i>
+                                        <p>Asistencias Diarias</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="tablasGenerales/semestreActual" class="nav-link">
+                                        <i class="fa-solid fa-school-circle-check"></i>
+                                        <p>Semestre Actual</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">
@@ -425,7 +437,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a>Home</a></li>
+                                <li class="breadcrumb-item"><a routerLink="home">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                             </ol>
                         </div>

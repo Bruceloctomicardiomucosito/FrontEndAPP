@@ -21,22 +21,33 @@ import { Home } from './home/home';
 
 export const routes: Routes = [
     {path: 'home', component: Home},
-    {path: 'alumnos', component: AlumnosEndpoints},
-    {path: 'asignacionDocenteMateriasEndpoints', component: AsignacionDocenteMateriasEndpoints},
-    {path: 'asignacionGruposAulasEndpoints', component: AsignacionGruposAulasEndpoints},
-    {path: 'asignacionPracticantesEndpoints', component: AsignacionPracticantesEndpoints},
+    {path: 'asignaciones', children:[
+            {path: 'DocenteMaterias', component: AsignacionDocenteMateriasEndpoints},
+            {path: 'GruposAulas', component: AsignacionGruposAulasEndpoints},
+            {path: 'Practicantes', component: AsignacionPracticantesEndpoints}
+    ]},
+    {path: 'infraestructura', children:[
+            {path: 'edificios', component: EdificiosEndpoints},
+            {path: 'aulas', component: AulasEndpoints},
+
+    ]},
+    {path: 'personal', children:[
+            {path: 'docentes', component: DocentesEndpoints},
+            {path: 'alumnos', component: AlumnosEndpoints}
+    ]},
+    {path: 'ofertaEducativa', children:[
+            {path: 'licenciaturas', component: LicenciaturasEndpoints},
+            {path: 'materias', component: MateriasEndpoints}
+    ]},
+    {path: 'tablasGenerales', children:[
+            {path: 'escuelas', component: EscuelasEndpoints},
+            {path: 'grupos', component: GruposEndpoints},
+            {path: 'modulos', component: ModulosEndpoints},
+            {path: 'nivelEducativo', component: NivelEducativoEndpoints},
+            {path: 'asistenciasDiarias', component: AsistenciaDiariaEndpoints},
+            {path: 'semestreActual', component: SemestreActualEndpoints}
+    ]},
     {path: 'asistenciaRemotaEndpoints', component: AsistenciaRemotaEndpoints},
-    {path: 'asistenciasDiarias', component: AsistenciaDiariaEndpoints},
-    {path: 'aulasEndpoints', component: AulasEndpoints},
-    {path: 'docentesEndpoints', component: DocentesEndpoints},
-    {path: 'edificiosEndpoints', component: EdificiosEndpoints},
-    {path: 'escuelasEndpoints', component: EscuelasEndpoints},
     {path: 'formAnexo6Endpoints', component: FormAnexo6Endpoints},
-    {path: 'gruposEndpoints', component: GruposEndpoints},
-    {path: 'licenciaturasEndpoints', component: LicenciaturasEndpoints},
-    {path: 'materiasEndpoints', component: MateriasEndpoints},
-    {path: 'modulosEndpoints', component: ModulosEndpoints},
-    {path: 'nivelEducativoEndpoints', component: NivelEducativoEndpoints},
-    {path: 'semestreActualEndpoints', component: SemestreActualEndpoints},
     {path: 'usuariosActualEndpoints', component: UsuariosActualEndpoints}
 ];
