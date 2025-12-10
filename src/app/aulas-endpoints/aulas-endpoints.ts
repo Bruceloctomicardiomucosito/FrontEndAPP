@@ -15,14 +15,19 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class AulasEndpoints implements OnInit{
   public AulasResults$! : Observable<Aula[]>;
+  
   public dataSource = new MatTableDataSource<Aula>();
+
   public displayColumn: string[] = ['idAula','idEdificio','observaciones','editar'];
-  public rspuesta: any;
+
   constructor(private service: AulasService){ }
 
   ngOnInit(): void {
+    this.getAllAulas();
+  }
+  getAllAulas()
+  {
     this.service.getAllAulas().subscribe(response => {
-      console.log(response);
       this.dataSource.data = response;
     });
   }

@@ -1,1 +1,41 @@
-<p>materias-endpoints works!</p>
+<mat-table #tableMaterias [dataSource]="dataSource" class="table table-striped">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="idMateria">
+        <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.idMateria}} </mat-cell>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="idLicenciatura">
+        <mat-header-cell *matHeaderCellDef> Licenciatura </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.idLicenciatura}} </mat-cell>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="semestre">
+        <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.semestre}} </mat-cell>
+    </ng-container>
+
+        <!-- Position Column -->
+    <ng-container matColumnDef="statusMateria">
+        <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.statusMateria}} </mat-cell>
+    </ng-container>
+
+        <!-- Position Column -->
+    <ng-container matColumnDef="editar">
+        <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary">Primary</button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+</mat-table>
