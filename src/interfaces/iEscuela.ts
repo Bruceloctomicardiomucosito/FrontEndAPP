@@ -1,5 +1,6 @@
 export interface Escuela { 
     idEscuela: number,
+    nombre: string,
     claveEscuela: string,
     director: string,
     idNivelEducativo: number,
