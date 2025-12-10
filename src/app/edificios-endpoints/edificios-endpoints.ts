@@ -5,23 +5,33 @@ import { Edificio } from '../../interfaces/iEdificio';
 import { EdificiosResults } from '../../interfaces/iEdificio';
 import { AsyncPipe } from '@angular/common';
 import { EdificiosService } from '../services/edificios';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-edificios-endpoints',
-  imports: [AsyncPipe],
+  standalone: true,
+  imports: [AsyncPipe, MatTableModule, MatCardModule],
   templateUrl: './edificios-endpoints.html',
   styleUrl: './edificios-endpoints.css',
 })
 export class EdificiosEndpoints implements OnInit{
 
   public EdificiosResults$!: Observable<Edificio[]>;
-  constructor(private service: EdificiosService){
-  }
+  public dataSource = new MatTableDataSource<Edificio>();
+  public displayColumn: string[] = ['idEdificio','nombre','numeroPisos','funcion','observaciones','editar'];
+
+  constructor(private service: EdificiosService){ }
+
   ngOnInit() : void 
   {
+    this.getAllEdificios();
+  }
+
+  getAllEdificios(){
     this.service.getAllEdificios().subscribe(
       response =>{
-        console.log('Lista de edificios',response);
+        this.dataSource.data = response;
       }
     );
   }

@@ -5,7 +5,6 @@ import { NivelesEducativosService } from '../services/niveles-educativos';
 
 @Component({
   selector: 'app-nivel-educativo-endpoints',
-  imports: [],
   templateUrl: './nivel-educativo-endpoints.html',
   styleUrl: './nivel-educativo-endpoints.css',
 })

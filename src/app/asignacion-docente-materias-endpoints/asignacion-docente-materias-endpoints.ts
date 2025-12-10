@@ -16,8 +16,8 @@ export class AsignacionDocenteMateriasEndpoints implements OnInit {
   constructor(private service: AsignacionDocenteMateriaService){ }
   
   ngOnInit(): void {
-    this.service.getAllAsugnacionesDocenteMateria().subscribe(response =>{
-      console.log(response);
+    this.service.getAllAsugnacionesDocenteMateria().subscribe(AsignacionesDocenteMateriaResults$ =>{
+      console.log(AsignacionesDocenteMateriaResults$);
     });
   }
 }
