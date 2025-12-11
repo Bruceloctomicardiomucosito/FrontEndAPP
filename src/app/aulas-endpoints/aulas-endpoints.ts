@@ -18,7 +18,7 @@ export class AulasEndpoints implements OnInit{
   
   public dataSource = new MatTableDataSource<Aula>();
 
-  public displayColumn: string[] = ['idAula','idEdificio','observaciones','editar'];
+  public displayColumn: string[] = ['idAula','idEdificio','observaciones','detalles','editar'];
 
   constructor(private service: AulasService){ }
 

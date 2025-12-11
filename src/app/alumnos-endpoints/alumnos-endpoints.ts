@@ -23,7 +23,7 @@ export class AlumnosEndpoints implements OnInit {
 
   dataSource = new MatTableDataSource<Alumno>();
 
-  public displayColumn: string[] = ['idAlumno','matricula','nombre','apellidoPaterno','apelidoMaterno','idSemestreActual','editar'];
+  public displayColumn: string[] = ['idAlumno','matricula','nombre','apellidoPaterno','apelidoMaterno','idSemestreActual','detalles','editar'];
 
   public alumnosRefresh : null = null;
 

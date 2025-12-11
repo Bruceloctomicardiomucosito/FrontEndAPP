@@ -18,7 +18,7 @@ export class DocentesEndpoints implements OnInit{
 
   public dataSource = new MatTableDataSource<Docente>();
 
-  public displayColumn: string[] = ['idDocente','codigoDocente','nombre','apellidoPaterno','apellidoMaterno','fechaNacimiento','sexo','editar'];
+  public displayColumn: string[] = ['idDocente','codigoDocente','nombre','apellidoPaterno','apellidoMaterno','fechaNacimiento','sexo','detalles','editar'];
 
   constructor(private service:DocentesService){ }
 

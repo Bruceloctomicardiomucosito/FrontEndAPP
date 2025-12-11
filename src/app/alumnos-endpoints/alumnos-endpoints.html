@@ -11,7 +11,7 @@
     <!-- CONTENT -->
     <div class="text-center">
         <div class="example-container mat-elevation-z8">
-            <mat-table #tableAlumnis [dataSource]="dataSource" class="table table-striped">
+            <mat-table #tableAlumnos [dataSource]="dataSource" class="table table-striped">
 
                 <!-- Position Column -->
                 <ng-container matColumnDef="idAlumno">
@@ -49,9 +49,16 @@
                     <mat-cell *matCellDef="let element"> {{element.idSemestreActual}} </mat-cell>
                 </ng-container>
 
+                <ng-container matColumnDef="detalles">
+                    <mat-header-cell *matHeaderCellDef> Detalles </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-warning"><i
+                                class="fa-solid fa-circle-info"></i></button> </mat-cell>
+                </ng-container>
+
                 <ng-container matColumnDef="editar">
                     <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
-                    <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary">Primary</button> </mat-cell>
+                    <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary"><i
+                                class="fa-solid fa-file-pen"></i></button> </mat-cell>
                 </ng-container>
 
                 <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
@@ -106,4 +113,5 @@
         </div> -->
     </div>
 </body>
+
 </html>

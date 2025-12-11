@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 export class MateriasEndpoints implements OnInit{
   public MateriasResults$! : Observable<Materia[]>;
   public dataSource = new MatTableDataSource<Materia>();
-  public displayColumn : string[] = ['idMateria','idLicenciatura','nombre','semestre','statusMateria','editar'];
+  public displayColumn : string[] = ['idMateria','idLicenciatura','nombre','semestre','statusMateria','detalles','editar'];
   constructor(private service: MateriasService){ }
 
   ngOnInit(): void {

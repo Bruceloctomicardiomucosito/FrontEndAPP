@@ -1,1 +1,45 @@
-<p>semestre-actual-endpoints works!</p>
+<mat-table #tableGrupos [dataSource]="dataSource" class="table table-striped">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="idSemestreActual">
+        <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.idSemestreActual}} </mat-cell>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+    </ng-container>
+        <!-- Position Column -->
+    <ng-container matColumnDef="descripcion">
+        <mat-header-cell *matHeaderCellDef> Descripcion </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.descripcion}} </mat-cell>
+    </ng-container>
+
+            <!-- Position Column -->
+    <ng-container matColumnDef="fechaInicio">
+        <mat-header-cell *matHeaderCellDef> Inicio </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fechaInicio}} </mat-cell>
+    </ng-container>
+        <!-- Position Column -->
+    <ng-container matColumnDef="fechaFin">
+        <mat-header-cell *matHeaderCellDef> Fin </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fechaFin}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="detalles">
+        <mat-header-cell *matHeaderCellDef> Detalles </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-warning"><i
+                    class="fa-solid fa-circle-info"></i></button> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+        <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary"><i
+                    class="fa-solid fa-file-pen"></i></button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+</mat-table>

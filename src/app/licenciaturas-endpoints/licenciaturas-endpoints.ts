@@ -19,7 +19,7 @@ export class LicenciaturasEndpoints implements OnInit{
   public dataSource = new MatTableDataSource<Licenciatura>();
 
   public displayColumn:string[] = ['idLicenciatura',
-    'nombre','descripcion','statusLicenciatura','editar'];
+    'nombre','descripcion','statusLicenciatura','detalles','editar'];
 
   constructor(private service: LicenciaturaService){ }
 

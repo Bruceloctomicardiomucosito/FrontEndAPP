@@ -19,7 +19,7 @@ export class EdificiosEndpoints implements OnInit{
 
   public EdificiosResults$!: Observable<Edificio[]>;
   public dataSource = new MatTableDataSource<Edificio>();
-  public displayColumn: string[] = ['idEdificio','nombre','numeroPisos','funcion','observaciones','editar'];
+  public displayColumn: string[] = ['idEdificio','nombre','numeroPisos','funcion','observaciones','detalles','editar'];
 
   constructor(private service: EdificiosService){ }
 

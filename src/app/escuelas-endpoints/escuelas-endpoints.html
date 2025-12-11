@@ -24,16 +24,16 @@
         <mat-cell *matCellDef="let element"> {{element.municipioLocalidad}} </mat-cell>
     </ng-container>
 
-        <!-- Position Column -->
     <ng-container matColumnDef="detalles">
         <mat-header-cell *matHeaderCellDef> Detalles </mat-header-cell>
-        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary">Detalles</button> </mat-cell>
+        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-warning"><i
+                    class="fa-solid fa-circle-info"></i></button> </mat-cell>
     </ng-container>
 
-            <!-- Position Column -->
     <ng-container matColumnDef="editar">
         <mat-header-cell *matHeaderCellDef> Editar </mat-header-cell>
-        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary">Editar</button> </mat-cell>
+        <mat-cell *matCellDef="let element"> <button type="button" class="btn btn-primary"><i
+                    class="fa-solid fa-file-pen"></i></button> </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
